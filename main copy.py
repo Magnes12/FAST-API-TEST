@@ -3,7 +3,6 @@ from fastapi import FastAPI, Query
 from pydantic import BaseModel
 
 
-
 app = FastAPI()
 
 
@@ -75,7 +74,8 @@ async def get_item(item_id: str, q: str | None = None, short: bool = False):
 
 
 @app.get("/users/{user_id}/items/{item_id}")
-async def get_user_item(user_id: int, item_id: str, q: str | None = None, short: bool = False):
+async def get_user_item(user_id: int, item_id: str,
+                        q: str | None = None, short: bool = False):
     pass
 
 
